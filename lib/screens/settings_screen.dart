@@ -179,7 +179,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ),
           const SizedBox(height: 6),
           const Text(
-            '以畫面寬度完整顯示漫畫時為準。譯文會先用這個大小換行；只有氣泡太小、換行後仍塞不下，才會再自動縮小。',
+            '以畫面寬度完整顯示網頁時為準。譯文會先用這個大小換行；只有文字框太小、換行後仍塞不下，才會再自動縮小。',
             style: TextStyle(color: AppColors.muted, fontSize: 12, height: 1.4),
           ),
           const SizedBox(height: 20),

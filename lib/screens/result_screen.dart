@@ -227,8 +227,8 @@ class _ResultScreenState extends State<ResultScreen> {
                   Expanded(
                     child: Text(
                       _bubbles.isEmpty
-                          ? '沒有偵測到對白。可返回再截一次。'
-                          : '最小字級；換行後仍塞不下才縮小。點氣泡可改譯文。',
+                          ? '沒有偵測到文字。可返回再截一次。'
+                          : '最小字級；換行後仍塞不下才縮小。點文字框可改譯文。',
                       style: const TextStyle(
                         color: AppColors.muted,
                         fontSize: 12,

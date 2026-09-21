@@ -206,7 +206,7 @@ class _PageOverlayLayerState extends State<PageOverlayLayer> {
       final result = await showOverlayTextDialog(
         context: context,
         bubble: created,
-        title: '新增對話框',
+        title: '新增文字框',
       );
       if (!mounted) return;
       if (result == null || result.delete || result.text.trim().isEmpty) {

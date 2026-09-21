@@ -29,7 +29,7 @@ String encodeLibraryJson({
 }) {
   return const JsonEncoder.withIndent('  ').convert({
     'version': 2,
-    'kind': 'ai-manga-library',
+    'kind': 'browser-translator-library',
     'bookmarks': [for (final item in bookmarks) item.toJson()],
     'overlays': jsonDecode(encodeOverlayPagesJson(overlays)),
   });

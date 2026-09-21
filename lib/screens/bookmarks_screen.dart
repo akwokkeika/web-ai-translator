@@ -135,7 +135,7 @@ class _BookmarksScreenState extends State<BookmarksScreen> {
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('刪除 overlay'),
-        content: Text('確定刪除「$title」的 ${page.bubbles.length} 個對話框？'),
+        content: Text('確定刪除「$title」的 ${page.bubbles.length} 個文字框？'),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
@@ -170,7 +170,7 @@ class _BookmarksScreenState extends State<BookmarksScreen> {
       final bytes = Uint8List.fromList(utf8.encode(json));
       final uri = await FilePicker.saveFile(
         dialogTitle: '匯出書籤與 overlay',
-        fileName: 'ai-manga-library.json',
+        fileName: 'browser-translator-library.json',
         type: FileType.custom,
         allowedExtensions: const ['json'],
         mimeType: 'application/json',
@@ -334,7 +334,7 @@ class _BookmarksScreenState extends State<BookmarksScreen> {
               final row = rows[index];
               final subtitle = StringBuffer(row.url);
               if (row.overlay != null) {
-                subtitle.write('\n${row.overlay!.bubbles.length} 個對話框');
+                subtitle.write('\n${row.overlay!.bubbles.length} 個文字框');
               }
               return Material(
                 color: AppColors.panel,

@@ -46,10 +46,10 @@ const _homeHtml = '''
   </style>
 </head>
 <body>
-  <h1>AI 漫畫翻譯</h1>
-  <p>在上方貼上漫畫網站網址。畫面出現漫畫後，按底部「翻譯本頁」。譯文會疊在網頁 overlay，可手動加框並自動保存。</p>
+  <h1>瀏覽器翻譯</h1>
+  <p>在上方貼上網址。畫面出現後，按底部「翻譯本頁」。譯文會疊在網頁 overlay，可手動加框並自動保存。</p>
   <div class="card"><span class="stamp">1.</span> 先到設定選擇 Gemini、OpenAI 或本機 Ollama</div>
-  <div class="card"><span class="stamp">2.</span> 打開漫畫頁，等圖片載入完成</div>
+  <div class="card"><span class="stamp">2.</span> 打開要翻譯的網頁，等內容載入完成</div>
   <div class="card"><span class="stamp">3.</span> 翻譯或手動畫框，overlay 會跟著頁面捲動</div>
 </body>
 </html>
@@ -245,7 +245,7 @@ class _BrowserScreenState extends State<BrowserScreen> {
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('清除 overlay'),
-        content: const Text('會刪除本頁已保存的對話框和譯文。'),
+        content: const Text('會刪除本頁已保存的文字框和譯文。'),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
@@ -283,7 +283,7 @@ class _BrowserScreenState extends State<BrowserScreen> {
     if (next && !_editHintShown && mounted) {
       _editHintShown = true;
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('拖曳空白處新增對話框，點選後拖角落可改大小')),
+        const SnackBar(content: Text('拖曳空白處新增文字框，點選後拖角落可改大小')),
       );
     }
   }
@@ -416,7 +416,7 @@ class _BrowserScreenState extends State<BrowserScreen> {
       messenger.hideCurrentSnackBar();
       messenger.showSnackBar(
         SnackBar(
-          content: Text('已疊上 ${captured.length} 個對話框'),
+          content: Text('已疊上 ${captured.length} 個文字框'),
           action: SnackBarAction(
             label: '查看截圖',
             onPressed: _openLastScreenshot,
@@ -747,7 +747,7 @@ class _TopBar extends StatelessWidget {
                 autocorrect: false,
                 onSubmitted: (_) => onSubmit(),
                 decoration: const InputDecoration(
-                  hintText: '貼上漫畫網址或搜尋',
+                  hintText: '貼上網址或搜尋',
                   prefixIcon: Icon(Icons.public, size: 18, color: AppColors.muted),
                   isDense: true,
                 ),

@@ -30,12 +30,16 @@ Future<void> main() async {
   await bookmarks.load();
   await overlays.load();
   runApp(
-    AiMangaApp(settings: settings, bookmarks: bookmarks, overlays: overlays),
+    BrowserTranslatorApp(
+      settings: settings,
+      bookmarks: bookmarks,
+      overlays: overlays,
+    ),
   );
 }
 
-class AiMangaApp extends StatelessWidget {
-  const AiMangaApp({
+class BrowserTranslatorApp extends StatelessWidget {
+  const BrowserTranslatorApp({
     super.key,
     required this.settings,
     required this.bookmarks,
@@ -49,7 +53,7 @@ class AiMangaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'AI漫畫翻譯',
+      title: '瀏覽器翻譯',
       debugShowCheckedModeBanner: false,
       theme: buildAppTheme(),
       home: BrowserScreen(

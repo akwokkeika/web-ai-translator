@@ -90,7 +90,7 @@ void main() {
 
   testWidgets('shrinks only when wrapped text still overflows', (tester) async {
     final size = fitBubbleFontSize(
-      text: '這段譯文非常長而且氣泡很小必須縮小才能塞進去一二三四五六七八九十',
+      text: '這段譯文非常長而且文字框很小必須縮小才能塞進去一二三四五六七八九十',
       maxWidth: 40,
       maxHeight: 28,
       minFontSize: 20,
