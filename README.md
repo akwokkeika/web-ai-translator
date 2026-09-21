@@ -1,5 +1,7 @@
 # 瀏覽器翻譯 / Browser Translator
 
+倉庫 / Repository: https://github.com/akwokkeika/web-ai-translator
+
 內建瀏覽器截圖，經 Gemini、OpenAI 或本機 Ollama 辨識畫面上的文字並翻譯後，把譯文疊回網頁。目前先做 Android APK。
 
 An Android app with a built-in browser. It screenshots the current page, asks Gemini, OpenAI, or local Ollama to locate and translate on-screen text, then overlays the translation on the page.
