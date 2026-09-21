@@ -1,4 +1,4 @@
-name: ai_manga
+name: web_ai_translator
 description: "In-app browser translator"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.

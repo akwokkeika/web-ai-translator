@@ -125,7 +125,7 @@ const pageMetricsScript = r'''
       dpr: window.devicePixelRatio || 1
     };
   }
-  window.__aiMangaCollect = collect;
+  window.__webAiTranslatorCollect = collect;
   function post() {
     try {
       if (window.flutter_inappwebview && window.flutter_inappwebview.callHandler) {
@@ -133,8 +133,8 @@ const pageMetricsScript = r'''
       }
     } catch (e) {}
   }
-  if (!window.__aiMangaMetrics) {
-    window.__aiMangaMetrics = true;
+  if (!window.__webAiTranslatorMetrics) {
+    window.__webAiTranslatorMetrics = true;
     window.addEventListener('scroll', post, true);
     window.addEventListener('resize', post, true);
     document.addEventListener('scroll', post, true);

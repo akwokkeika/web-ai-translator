@@ -177,7 +177,7 @@ class _BrowserScreenState extends State<BrowserScreen> {
       await controller.evaluateJavascript(source: pageMetricsScript);
       final raw = await controller.evaluateJavascript(
         source:
-            r'(function(){var c=window.__aiMangaCollect&&window.__aiMangaCollect();return typeof c==="string"?c:JSON.stringify(c||{});})()',
+            r'(function(){var c=window.__webAiTranslatorCollect&&window.__webAiTranslatorCollect();return typeof c==="string"?c:JSON.stringify(c||{});})()',
       );
       final parsed = WebScrollMetrics.tryParse(raw);
       if (parsed != null) {

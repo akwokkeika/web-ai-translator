@@ -6,22 +6,22 @@ import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:ai_manga/models/ai_provider.dart';
-import 'package:ai_manga/models/bookmark.dart';
-import 'package:ai_manga/models/bubble.dart';
-import 'package:ai_manga/models/overlay_page.dart';
-import 'package:ai_manga/services/bookmark_store.dart';
-import 'package:ai_manga/services/bubble_parser.dart';
-import 'package:ai_manga/services/gemini_translator.dart';
-import 'package:ai_manga/services/library_backup.dart';
-import 'package:ai_manga/services/ollama_translator.dart';
-import 'package:ai_manga/services/openai_translator.dart';
-import 'package:ai_manga/services/overlay_coords.dart';
-import 'package:ai_manga/services/overlay_store.dart';
-import 'package:ai_manga/services/page_metrics.dart';
-import 'package:ai_manga/services/settings_store.dart';
-import 'package:ai_manga/services/text_fit.dart';
-import 'package:ai_manga/services/translator_factory.dart';
+import 'package:web_ai_translator/models/ai_provider.dart';
+import 'package:web_ai_translator/models/bookmark.dart';
+import 'package:web_ai_translator/models/bubble.dart';
+import 'package:web_ai_translator/models/overlay_page.dart';
+import 'package:web_ai_translator/services/bookmark_store.dart';
+import 'package:web_ai_translator/services/bubble_parser.dart';
+import 'package:web_ai_translator/services/gemini_translator.dart';
+import 'package:web_ai_translator/services/library_backup.dart';
+import 'package:web_ai_translator/services/ollama_translator.dart';
+import 'package:web_ai_translator/services/openai_translator.dart';
+import 'package:web_ai_translator/services/overlay_coords.dart';
+import 'package:web_ai_translator/services/overlay_store.dart';
+import 'package:web_ai_translator/services/page_metrics.dart';
+import 'package:web_ai_translator/services/settings_store.dart';
+import 'package:web_ai_translator/services/text_fit.dart';
+import 'package:web_ai_translator/services/translator_factory.dart';
 
 void main() {
   test('parse ratio coordinates', () {
